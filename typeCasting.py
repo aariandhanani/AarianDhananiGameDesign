@@ -1,8 +1,8 @@
-userInput = int(input("Please input the number of terms you would like in the fibonacci."))
+userInput = int(input("Please input a number.\n"))
 
-for x in range(5):
-    for y in range(1,6 - x):
-        print((6-x) - y, end = " ")
+for x in range(userInput):
+    for y in range(1,(userInput + 1) - x):
+        print(((userInput + 1) - x) - y, end = " ")
     print()
 
 print()
