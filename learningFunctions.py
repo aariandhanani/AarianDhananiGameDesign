@@ -20,9 +20,17 @@ def running_Loops():
             print(x, end = "")
         print("")
 
+def loops_rows_col(row, col):
+    for rows in range(row):
+        for cols in range(col):
+            print("*", end = "")
+        print()
+
 number = 10
 
 for x in range(3):
     testing_Functions(number)
 
 running_Loops()
+
+loops_rows_col(5, 10)
