@@ -1,11 +1,15 @@
-for x in range(1, 10):
+#Aarian Dhanani
+
+number = 15
+
+for x in range(1, (number + 1)):
     for y in range(x):
         print("*", end = "")
-    for z in range(9 - x):
+    for z in range(number - x):
         print(" ", end = "")
 
 
-    for y in range(10 - x):
+    for y in range((number + 1) - x):
         print("*", end = "")
     for z in range(x - 1):
         print(" ", end = "")
@@ -13,11 +17,11 @@ for x in range(1, 10):
 
     for z in range(x - 1):
         print(" ", end = "")
-    for y in range(10 - x):
+    for y in range((number + 1) - x):
         print("*", end = "")
 
 
-    for z in range(9 - x):
+    for z in range(number - x):
         print(" ", end = "")
     for y in range(x):
         print("*", end = "")
