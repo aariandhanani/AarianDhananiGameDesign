@@ -9,3 +9,8 @@ for x in range(len(array)):
 # first = array[0]
 #
 # print(first)
+
+fruit = ["apple", "banana", "orange", "pear"]
+
+for food in range(len(fruit)):
+    print(fruit[food], end = " ")
