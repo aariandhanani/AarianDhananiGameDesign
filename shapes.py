@@ -1,6 +1,6 @@
 #Aarian Dhanani
 
-number = 15
+number = 9
 
 for x in range(1, (number + 1)):
     for y in range(x):
@@ -25,5 +25,4 @@ for x in range(1, (number + 1)):
         print(" ", end = "")
     for y in range(x):
         print("*", end = "")
-    print(" ", end = "")
     print("")
