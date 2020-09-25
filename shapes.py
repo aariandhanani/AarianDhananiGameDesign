@@ -2,6 +2,9 @@
 
 number = 15
 
+for x in range (0, 4):
+    print("*", end = "")
+print("")
 for x in range(1, (number + 1)):
     for y in range(x):
         print("*", end = "")
