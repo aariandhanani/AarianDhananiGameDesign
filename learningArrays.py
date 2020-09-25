@@ -1,8 +1,11 @@
 #Aarian Dhanani
 #Arrays
 
-array = ["One", "Two", "Three", "Four"]
+array = ["One", "Two", "Three", "Four", "Five"]
 
-first = array[0]
+for x in range(len(array)):
+    print(array[x])
 
-print(first)
+# first = array[0]
+#
+# print(first)
