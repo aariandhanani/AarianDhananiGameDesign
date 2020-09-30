@@ -12,8 +12,12 @@ print(indexNumber)
 print(strVar[indexNumber:indexNumber + 4])
 print(strVar[indexNumber:])
 print(strVar[ :indexNumber])
-print(strVar.replace("name", "nombre"))
-strVar = strVar.replace("name", "nombre")
+print(strVar.replace("name", "first name"))
+strVar = strVar.replace("name", "first name")
+print(strVar)
+
+print(strVar.upper())
+print(strVar.lower())
 print(strVar)
 
 # var = ["M", "y", " ", "n", "a", "m", "e", " ", "i", "s", " ", "A", "a", "r", "i", "a", "n"]
