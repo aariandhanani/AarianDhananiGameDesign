@@ -15,10 +15,12 @@ print(strVar[ :indexNumber])
 print(strVar.replace("name", "first name"))
 strVar = strVar.replace("name", "first name")
 print(strVar)
-
 print(strVar.upper())
 print(strVar.lower())
 print(strVar)
+
+print(strVar.reverse())
+
 
 # var = ["M", "y", " ", "n", "a", "m", "e", " ", "i", "s", " ", "A", "a", "r", "i", "a", "n"]
 #
