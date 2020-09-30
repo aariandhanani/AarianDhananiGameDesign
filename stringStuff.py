@@ -19,8 +19,6 @@ print(strVar.upper())
 print(strVar.lower())
 print(strVar)
 
-print(strVar.reverse())
-
 
 # var = ["M", "y", " ", "n", "a", "m", "e", " ", "i", "s", " ", "A", "a", "r", "i", "a", "n"]
 #
