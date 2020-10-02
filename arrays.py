@@ -4,6 +4,14 @@
 myList = [2, 4, 5, 7, 8, 9]
 myFruit = ["Apple", "Banana", "Orange"]
 
+# myFruit.remove("Apple")
+
+myFruit.pop(0)
+
+del myFruit[0]
+
+print(myFruit)
+
 print(len(myFruit))
 # print(myList[1])
 # print(myList[-2])
