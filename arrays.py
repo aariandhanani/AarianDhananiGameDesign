@@ -9,6 +9,8 @@ myFruit = ["Apple", "Banana", "Orange"]
 myFruit.pop(0)
 
 del myFruit[0]
+myFruit.append("Mango")
+myFruit.insert(1, "Kiwi")
 
 print(myFruit)
 
