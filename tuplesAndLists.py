@@ -65,7 +65,11 @@ listNew = ["hi", "ok", "hello"]
 tupleNew = tuple(listNew)
 
 # 12. Write a Python program to remove an item from a tuple.
-# It is not possible to remove an item from a tuple.
+tupleRemove = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+tupleRemove = list(tupleRemove)
+tupleRemove.remove(2)
+tupleRemove = tuple(tupleRemove)
+print(tupleRemove)
 
 # 13. Write a Python program to slice a tuple.
 tupleSlice = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -81,18 +85,37 @@ tupleLength = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 print(len(tupleLength))
 
 # 16. Write a Python program to convert a tuple to a dictionary.
-# ?
+# Skip
 
 # 17. Write a Python program to unzip a list of tuples into individual lists.
-# ?
+listUnzip = [(1, 2), (3, 4), (5, 6)]
+print(list(zip(*listUnzip)))
 
 # 18. Write a Python program to reverse a tuple.
+tupleReverse = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+tupleReverse = list(tupleReverse)
+tupleReverse.reverse()
+tupleReverse = tuple(tupleReverse)
+print(tupleReverse)
+
+
 # 19. Write a Python program to convert a list of tuples into a dictionary.
+# Skip
+
 # 20. Write a Python program to print a tuple with string formatting.Sample tuple : (100, 200, 300)Output :This is a tuple (100, 200, 300)
+
+
 # 21. Write a Python program to replace last value of tuples in a list.Sample list: [(10, 20, 40), (40, 50, 60), (70, 80, 90)]Expected Output: [(10, 20, 100), (40, 50, 100), (70, 80, 100)]
+
+
 # 22. Write a Python program to remove an empty tuple(s) from a list of tuples.Sample data: [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]Expected output: [('',), ('a', 'b'), ('a', 'b', 'c'), 'd']
+
+
 # 23. Write a Python program to sort a tuple by its float element.Sample data: [('item1', '12.20'), ('item2', '15.10'), ('item3', '24.5')]Expected Output: [('item3', '24.5'), ('item2', '15.10'), ('item1', '12.20')]
+
+
 # 24. Write a Python program to count the elements in a list until an element is a tuple.
+
 
 
 # Sources:
