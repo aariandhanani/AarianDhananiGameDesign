@@ -5,19 +5,36 @@
 # 1. Write a Python program to create a tuple.
 tuple = ("hi", "hello")
 
-# 2. Write a Python program to create a tuple with different data types
+# 2. Write a Python program to create a tuple with different data types.
 tupleWithMultipleDataTypes = ("hi", 1, False)
 
 # 3. Write a Python program to create a tuple with numbers and print one item.
-
+tupleWithNumbers = (1, 2, 3, 4, 5)
+print(tupleWithNumbers[2])
 
 # 4. Write a Python program to unpack a tuple in several variables.
+tupleExample = (1, 4, 9)
+variable1 = tupleExample[0]
+variable2 = tupleExample[1]
+variable3 = tupleExample[2]
+
+
 # 5. Write a Python program to add an item in a tuple.
+tupleAdd1 = (1, 2, 3)
+tupleAdd2 = (4, 5, 6)
+tupleAdd1 = tupleAdd1 + tupleAdd2
+print(tupleAdd1)
+
 # 6. Write a Python program to convert a tuple to a string.
-# 7. Write a Python program to get the 4th element and 4th element from the last of a tuple
-# 8. Write a Python program to create the colon of a tuple
+
+# 7. Write a Python program to get the 4th element and 4th element from the last of a tuple.
+
+# 8. Write a Python program to create the colon of a tuple.
+
 # 9. Write a Python program to find the repeated items of a tuple.
+
 # 10. Write a Python program to check whether an element exists within a tuple.
+
 # 11. Write a Python program to convert a list to a tuple.
 # 12. Write a Python program to remove an item from a tuple.
 # 13. Write a Python program to slice a tuple.
