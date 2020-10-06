@@ -23,11 +23,17 @@ variable3 = tupleExample[2]
 tupleAdd1 = (1, 2, 3)
 tupleAdd2 = (4, 5, 6)
 tupleAdd1 = tupleAdd1 + tupleAdd2
-print(tupleAdd1)
 
 # 6. Write a Python program to convert a tuple to a string.
+tupleToString = ("Hi ", "how ", "are ", "you", "?")
+string = ''.join(tupleToString)
+# print(string)
 
 # 7. Write a Python program to get the 4th element and 4th element from the last of a tuple.
+tupleElement = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+print(tupleElement[3])
+fourthToLastElement = (len(tupleElement)) - 4
+print(tupleElement[fourthToLastElement])
 
 # 8. Write a Python program to create the colon of a tuple.
 
@@ -50,3 +56,5 @@ print(tupleAdd1)
 
 # Sources:
 # https://www.programiz.com/python-programming/tuple
+# https://stackoverflow.com/questions/1380860/add-variables-to-tuple#:~:text=However%2C%20tuples%20in%20Python%20are,tuple%20once%20it%20is%20created.
+# https://www.geeksforgeeks.org/python-program-to-convert-a-tuple-to-a-string/
