@@ -40,10 +40,21 @@ dictionary4 =  {0: 1, 4: 5, 2: 3}
 
 key = 0
 
-if key in dictionary4:
-    print("Yes")
-else:
-    print("No")
+# From Homework (question 4):
+# if key in dictionary4:
+#     print("Yes")
+# else:
+#     print("No")
+
+#From Class (question 4):
+
+def key_Finder(key):
+    if key in dictionary4:
+        print("Yes")
+    else:
+        print("No")
+
+key_Finder(key)
 
 # Write a Python program to iterate over dictionaries using for loops.
 
