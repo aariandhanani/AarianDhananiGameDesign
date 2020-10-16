@@ -5,7 +5,7 @@
 import random
 import time
 
-name = input("What is your name?")
-print("Hello", name)
+name = input("What is your name? ")
+print("Hello ", name)
 
-time.sleep(3)
+# time.sleep(3)
