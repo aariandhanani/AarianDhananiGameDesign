@@ -51,12 +51,12 @@ while answer == "yes":
                 win = "yes"
             else:
                 checkWord = ""
+
+            if turns == 0:
+                print("GAME OVER! The word was", word)
         else:
             turns = 0
 
-
-    if win == "no":
-        print("GAME OVER! The word was", word)
 
     answer = input("Do you want to play again? ")
 
