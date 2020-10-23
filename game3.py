@@ -20,8 +20,6 @@ y3 = random.randint(0, 4)
 x4 = random.randint(0, 4)
 y4 = random.randint(0, 4)
 
-print(x1, y1, x4, y4)
-
 guess1 = 5
 guess2 = 5
 
