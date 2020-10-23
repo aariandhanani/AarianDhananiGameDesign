@@ -95,3 +95,5 @@ print("You win!")
 # https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/
 # https://www.w3schools.com/python/ref_random_randint.asp
 # https://codippa.com/check-if-string-is-integer-in-python/
+# https://www.geeksforgeeks.org/python-exit-commands-quit-exit-sys-exit-and-os-_exit/
+
