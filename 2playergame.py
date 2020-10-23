@@ -25,6 +25,20 @@ gameWordsAppleProducts = ['iPhone', 'iPad', 'iMac', 'MacBook Pro', 'MacBook Air'
 def quitGame():
     exit()
 
+def multiplayerScores(player1score, player2score):
+    print("_________________________Final scores_________________________")
+    print("Player 1:", player1score)
+    print("Player 2:", player2score)
+
+    if player1score > player2score:
+        print("Player 1 wins!")
+    elif player2score > player1score:
+        print("Player 2 wins!")
+    else:
+        print("It's a tie!")
+    
+    
+
 while playGame == "1":
     score = 0
     roundNumber = 1
@@ -208,16 +222,7 @@ while playGame == "1":
                             else:
                                 roundNumber = roundNumber + 1
             if numberOfRounds == 0:
-                print("_________________________Final scores_________________________")
-                print("Player 1:", player1score)
-                print("Player 2:", player2score)
-
-                if player1score > player2score:
-                    print("Player 1 wins!")
-                elif player2score > player1score:
-                    print("Player 2 wins!")
-                else:
-                    print("It's a tie!")
+                multiplayerScores(player1score, player2score)
 
                 playAgain2 = input("Would you like to play again? ")
 
