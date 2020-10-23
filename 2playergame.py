@@ -1,8 +1,6 @@
 import random
 import time
 
-#Fix single player error
-
 score = 0
 roundNumber = 1
 option1 = "0"
@@ -23,6 +21,9 @@ gameWordsComputerScience = ['python', 'javascript', 'java', 'PHP', 'hardware', '
 gameWordsFruits = ['apple', 'banana', 'peach', 'blueberry', 'mango', 'strawberry', 'lemon', 'watermelon', 'cherry', 'orange', 'grapes', 'kiwi', 'pear', 'papaya', 'grapefruit']
 gameWordsNintendoCharacters = ['Mario', 'Link', 'Luigi', 'Zelda', 'Diddy Kong', 'Peach', 'Donkey Kong', 'Bowser', 'Kirby', 'Bowser Jr.', 'Marth', 'Min Min', 'Daisy', 'Pikachu', 'Charizard']
 gameWordsAppleProducts = ['iPhone', 'iPad', 'iMac', 'MacBook Pro', 'MacBook Air', 'MacBook', 'iPad Air', 'iPad Pro', 'HomePod', 'Apple Watch', 'Apple TV', 'Mac Pro', 'Mac Mini', 'iPad Mini', 'iMac Pro']
+
+def quitGame():
+    exit()
 
 while playGame == "1":
     score = 0
@@ -55,7 +56,7 @@ while playGame == "1":
         option1 = input("Input: ")
 
         if option1 == "3":
-            exit()
+            quitGame()
         
         if option1 != "1" and option1 != "2" and option1 != "3":
             print("Please enter a valid input")
