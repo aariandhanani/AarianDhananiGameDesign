@@ -9,7 +9,7 @@
 # append "a"
 # read "r"
 
-import os
+import os, time
 
 myFile = open("newFile.txt", "w") #Opens a file if it exists and if it doesn't exist it will create a file
 
@@ -38,6 +38,17 @@ print(myFile.read())
 
 myFile.close()
 
+time.sleep(1)
 os.remove("newFile.txt")
+
+if os.path.exists("2playergame.py"):
+    print("yes")
+else:
+    print("no")
+
+if os.path.exists("/Users/aariandhanani/Desktop/AarianGameDesign2020/AarianDhananiGameDesign/GameDesignDiscordBot/index.js"):
+    print("yes")
+else:
+    print("no")
 
 # https://www.guru99.com/reading-and-writing-files-in-python.html
