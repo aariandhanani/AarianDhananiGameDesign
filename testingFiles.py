@@ -64,4 +64,8 @@ myFile = open("newFile.txt", "r")
 print(myFile.read())
 
 myFile.close()
+
+#Ask user for the name of the file to be created
+#Ask the user for info to be saved in the file
+#Create a menu where you ask if you want to create a file or delete a file or add something to a file or  write something to a file (with a warning), or print what is in a file
 # https://www.guru99.com/reading-and-writing-files-in-python.html
