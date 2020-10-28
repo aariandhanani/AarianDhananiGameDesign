@@ -9,6 +9,8 @@
 # append "a"
 # read "r"
 
+import os
+
 myFile = open("newFile.txt", "w") #Opens a file if it exists and if it doesn't exist it will create a file
 
 myFile.write("Hello")
@@ -36,5 +38,6 @@ print(myFile.read())
 
 myFile.close()
 
+os.remove("newFile.txt")
 
 # https://www.guru99.com/reading-and-writing-files-in-python.html
