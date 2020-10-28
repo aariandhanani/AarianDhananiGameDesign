@@ -25,7 +25,7 @@ print(myFile.read())
 myFile.close()
 
 
-myFile = open("newFile.txt", "a") #Opens a file if it exists and if it doesn't exist it will create a file
+myFile = open("newFile.txt", "a")
 
 myFile.write("\nOk")
 
@@ -51,4 +51,17 @@ if os.path.exists("/Users/aariandhanani/Desktop/AarianGameDesign2020/AarianDhana
 else:
     print("no")
 
+myFile = open("newFile.txt", "w")
+
+for i in range(10):
+    word = "This is line number " + str(i + 1) + "\n"
+    myFile.write(word)
+
+myFile.close()
+
+myFile = open("newFile.txt", "r")
+
+print(myFile.read())
+
+myFile.close()
 # https://www.guru99.com/reading-and-writing-files-in-python.html
