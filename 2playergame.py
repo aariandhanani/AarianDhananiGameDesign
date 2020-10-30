@@ -1,6 +1,8 @@
+# Aarian Dhanani
 import random
 import time
 
+# Defining Variables
 score = 0
 roundNumber = 1
 option1 = "0"
@@ -16,15 +18,17 @@ playAgain2 = "yes"
 
 temporaryRound = 0
 
-
+# Creating the arrays
 gameWordsComputerScience = ['python', 'javascript', 'java', 'PHP', 'hardware', 'software', 'laptop', 'keyboard', 'monitor', 'PC', 'Dell', 'Apple', 'computer', 'charger', 'code']
 gameWordsFruits = ['apple', 'banana', 'peach', 'blueberry', 'mango', 'strawberry', 'lemon', 'watermelon', 'cherry', 'orange', 'grapes', 'kiwi', 'pear', 'papaya', 'grapefruit']
 gameWordsNintendoCharacters = ['Mario', 'Link', 'Luigi', 'Zelda', 'Diddy Kong', 'Peach', 'Donkey Kong', 'Bowser', 'Kirby', 'Bowser Jr.', 'Marth', 'Min Min', 'Daisy', 'Pikachu', 'Charizard']
 gameWordsAppleProducts = ['iPhone', 'iPad', 'iMac', 'MacBook Pro', 'MacBook Air', 'MacBook', 'iPad Air', 'iPad Pro', 'HomePod', 'Apple Watch', 'Apple TV', 'Mac Pro', 'Mac Mini', 'iPad Mini', 'iMac Pro']
 
+# Exits the program
 def quitGame():
     exit()
 
+# Prints the multiplayer game score
 def multiplayerScores(player1score, player2score):
     print("_________________________Final scores_________________________")
     print("Player 1:", player1score)
@@ -36,9 +40,9 @@ def multiplayerScores(player1score, player2score):
         print("Player 2 wins!")
     else:
         print("It's a tie!")
-    
-    
 
+
+# Main menu with the games
 while playGame == "1":
     score = 0
     roundNumber = 1
@@ -52,10 +56,12 @@ while playGame == "1":
     playAgain1 = "yes"
     playAgain2 = "yes"
     temporaryRound = 0
-    
+
     # option1 = 0
     # option2 = 0
-    while option1 != "1" and option1 != "2" and option1 != "3": 
+
+    # Menu 1 to select gamemode or to exit the program
+    while option1 != "1" and option1 != "2" and option1 != "3":
         print("____________________________________________________________")
         print("|                                                          |")
         print("|                 Welcome to Word Scramble                 |")
@@ -71,12 +77,12 @@ while playGame == "1":
 
         if option1 == "3":
             quitGame()
-        
+
         if option1 != "1" and option1 != "2" and option1 != "3":
             print("Please enter a valid input")
 
-
-    while option2 != "1" and option2 != "2" and option2 != "3" and option2 != "4": 
+    # Menu 2 to select game category
+    while option2 != "1" and option2 != "2" and option2 != "3" and option2 != "4":
         print("____________________________________________________________")
         print("|                                                          |")
         print("|                 Welcome to Word Scramble                 |")
@@ -90,7 +96,7 @@ while playGame == "1":
         print("____________________________________________________________")
 
         option2 = input("Input: ")
-        
+
         if option2 != "1" and option2 != "2" and option2 != "3" and option2 != "4":
             print("Please enter a valid input")
 
@@ -106,6 +112,7 @@ while playGame == "1":
     if option2 == "4":
         option2 = gameWordsAppleProducts
 
+    # Single player
     if option1 == "1":
         print("Unscramble the word! You will be asked if you want to play again every 5 guesses.")
         while playAgain1 == "yes":
@@ -138,12 +145,13 @@ while playGame == "1":
                 else:
                     roundNumber = roundNumber + 1
     else:
+        # Multiplayer
         player1score = 0
         player2score = 0
         player = 1
-        
+
         print("Unscramble the word! Each player will have 5 guesses per round.")
-        
+
         while playAgain2 == "yes":
             numberOfRounds = input("How many rounds would each player like to play? ")
             try:
