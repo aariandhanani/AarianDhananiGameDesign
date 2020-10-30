@@ -49,14 +49,18 @@ def deleteFile():
         print("File not found. Returning to File Menu")
 
 def appendFile():
-    myFile = open("newFile.txt", "a")
-
+    fileName = input("What is the name of the file you would like to write to? ")
+    fileName = fileName + ".txt"
     question = input("What you like to write to this file?")
+    myFile = open(fileName, "a")
     myFile.write(question)
     
     myFile.close()
 
 def overwriteFile():
+    fileName = input("What is the name of the file you would like to create? Please note that if a file with this name already exists, a new file will not be created. ")
+    fileName = fileName + ".txt"
+    
     myFile = open(fileName, "w")
 
     question = input("Are you sure that you would like to overwrite this file? Previous data will likely be lost (Please type yes if you would like to overwrite this file. )? ")
