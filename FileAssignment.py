@@ -1,5 +1,4 @@
 # Aarian Dhanani
-# October 29th, 2020
 
 # ask the user for the name of the file to be created
 # ask the user for the info to be saved in the file
@@ -18,6 +17,7 @@ fileMenuOn = 1
 option1 = "0"
 question = " "
 
+#To create a new file (or open an existing one)
 def newFile():
     fileName = input("What is the name of the file you would like to create? Please note that if a file with this name already exists, a new file will not be created. ")
     fileName = fileName + ".txt"
@@ -38,7 +38,8 @@ def newFile():
         print(myFile.read())
 
         myFile.close()
-    
+
+# To delete a file 
 def deleteFile():
     fileName = input("What is the name of the file you would like to delete? ")
     fileName = fileName + ".txt"
@@ -48,6 +49,7 @@ def deleteFile():
     else:
         print("File not found. Returning to File Menu")
 
+# To append something to a file
 def appendFile():
     fileName = input("What is the name of the file you would like to write to? ")
     fileName = fileName + ".txt"
@@ -57,6 +59,7 @@ def appendFile():
     
     myFile.close()
 
+# To overwrite a file
 def overwriteFile():
     fileName = input("What is the name of the file you would like to create? Please note that if a file with this name already exists, a new file will not be created. ")
     fileName = fileName + ".txt"
@@ -77,7 +80,8 @@ def overwriteFile():
         print(myFile.read())
 
         myFile.close()
-        
+
+# To read a file
 def readFile():
     fileName = input("What is the name of the file you would like to read? ")
     fileName = fileName + ".txt"
@@ -88,6 +92,7 @@ def readFile():
     myFile.close()
     
 
+# The main menu
 while option1 != "1" and option1 != "2" and option1 != "3" and option1 != "4" and option1 != "5" and option1 != "6": 
     print("____________________________________________________________")
     print("|                                                          |")
@@ -104,7 +109,8 @@ while option1 != "1" and option1 != "2" and option1 != "3" and option1 != "4" an
     print("____________________________________________________________")
 
     option1 = input("Input: ")
-
+    
+    #Exits the problem when the user inputs 6
     if option1 == "6":
         exit()
         
