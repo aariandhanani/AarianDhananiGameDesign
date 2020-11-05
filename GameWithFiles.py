@@ -19,6 +19,7 @@ playAgain1 = "yes"
 
 temporaryRound = 0
 
+#Opens the file with the words
 def computerSciencewords(gameArray):
     myFile = open("gameCategories.txt", "r")
 
@@ -36,6 +37,7 @@ def computerSciencewords(gameArray):
 
     return gameArray
 
+# Changes and prints the leaderboard
 def leaderboard(score):
     alreadyDone = 0
     score = 2
@@ -81,7 +83,7 @@ while playGame == "1":
     playAgain1 = "no"
     temporaryRound = 0
 
-    # Menu 2 to select game category
+    # Prints the menu
     while option != "1" and option != "2" and option != "3":
         print("____________________________________________________________")
         print("|                                                          |")
