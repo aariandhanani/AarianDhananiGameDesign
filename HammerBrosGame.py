@@ -2,13 +2,15 @@ import pygame
 
 pygame.init()
 
-WIDTH = 1000
-HEIGHT = 600
+WIDTH = 960
+HEIGHT = 640
 screen = pygame.display.set_mode((WIDTH,HEIGHT)) # this is a tuple
 
 # screen.fill((R,G,B))
 
 walkLeft = [pygame.image.load("WalkLeft/1.png"), pygame.image.load("WalkLeft/1.png"), pygame.image.load("WalkLeft/2.png"), pygame.image.load("WalkLeft/2.png"), pygame.image.load("WalkLeft/3.png"), pygame.image.load("WalkLeft/3.png"), pygame.image.load("WalkLeft/4.png"), pygame.image.load("WalkLeft/4.png")]
+walkRight = [pygame.image.load("WalkRight/1.png"), pygame.image.load("WalkRight/1.png"), pygame.image.load("WalkRight/2.png"), pygame.image.load("WalkRight/2.png"), pygame.image.load("WalkRight/3.png"), pygame.image.load("WalkRight/3.png"), pygame.image.load("WalkRight/4.png"), pygame.image.load("WalkRight/4.png")]
+
 background = pygame.image.load("brickWall copy.png")
 # image1 = pygame.image.load("1.png")
 screen.fill((113, 96, 255))
@@ -27,10 +29,22 @@ h = 100
 r = 50
 
 leftImage = 0
+rightImage = 0
+leftOrRight = 1
+
+# To control the frames
+clock = pygame.time.clock()
+
+# control left and right movements
+left = False
+right = False
 
 def redrawWindow():
     screen.blit(background, (0,0))
-    screen.blit(walkLeft[leftImage], (x,y))
+    if leftOrRight == 0:  
+        screen.blit(walkLeft[leftImage], (x,y))
+    else:
+        screen.blit(walkRight[rightImage], (x,y))
     pygame.display.update()
 
 
@@ -47,7 +61,7 @@ while run:
 
     keyboardKey = pygame.key.get_pressed()
 
-    speed = 5
+    speed = 10
 
     #if keyboardKey[pygame.K_UP]:
         #y = y - speed
@@ -56,6 +70,7 @@ while run:
         #y = y + speed
          
     if keyboardKey[pygame.K_LEFT] and x > speed:
+        leftOrRight = 0
         if leftImage != 3:
             leftImage += 1
         else:
@@ -64,6 +79,11 @@ while run:
         r = r - speed
 
     if keyboardKey[pygame.K_RIGHT] and x < WIDTH - w - speed:
+        leftOrRight = 1
+        if rightImage != 3:
+            rightImage += 1
+        else:
+            rightImage = 0
         x = x + speed
         r = r + speed
 
