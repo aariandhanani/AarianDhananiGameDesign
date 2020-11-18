@@ -1,4 +1,5 @@
 import pygame
+
 pygame.init()
 WIDTH = 1000
 HEIGHT = 600
@@ -7,16 +8,19 @@ pygame.display.set_caption("First Game")
  
 walkRight = [pygame.image.load('WalkRight/1.png'), pygame.image.load('WalkRight/2.png'), pygame.image.load('WalkRight/3.png'), pygame.image.load('WalkRight/4.png')]
 walkLeft = [pygame.image.load('WalkLeft/1.png'), pygame.image.load('WalkLeft/2.png'), pygame.image.load('WalkLeft/3.png'), pygame.image.load('WalkLeft/4.png')]
-bg = pygame.image.load('brickWall copy.png')
+bg = pygame.image.load('modifiedMarioNew.png')
 character = pygame.image.load('WalkRight/1.png')
  
 x = 50
-y = 400
+y = 390
 width = 40
 height = 60
-speed = 5
+speed = 10
 #to control the frames
 clock = pygame.time.Clock()
+
+backgroundX = 0
+backgroundSpeed = 15
  
 Jump = False
 high = 10
@@ -29,7 +33,7 @@ walkCount = 0
 def redrawGameWindow():
     global walkCount #it makes sure is using the global walkCount that created earlier
  
-    screen.blit(bg, (0,0))
+    screen.blit(bg, (backgroundX,0))
     if walkCount + 1 >= 12:
         walkCount = 0
     if left:
@@ -41,6 +45,7 @@ def redrawGameWindow():
     else:
         screen.blit(character, (x, y))
         walkCount = 0
+    #screen.blit(character, (x, y))
     pygame.display.update()
  
 run = True
@@ -55,25 +60,34 @@ while run:
     keys = pygame.key.get_pressed()
  
     if keys[pygame.K_LEFT] and x > speed:
-        x -= speed
+        #x -= speed
         left = True
         right = False
+        backgroundX += backgroundSpeed
+        #if backgroundX < 0:
+            #backgroundX = 0
+        screen.blit(bg, (backgroundX,0))
+        #screen.blit(character, (x, y))
  
     elif keys[pygame.K_RIGHT] and x < WIDTH - speed - width:
-        x += speed
+        #x += speed
         left = False
         right = True
- 
+        backgroundX -= backgroundSpeed
+        #if backgroundX > 3000:
+            #backgroundX = 3000
+        screen.blit(bg, (backgroundX,0))
+         
     else:
         left = False
         right = False
         walkCount = 0
  
     if not(Jump):
-        if keys[pygame.K_UP] and y > speed:     # I need to substract to the y
-            y -= speed
-        if keys[pygame.K_DOWN] and y < HEIGHT - height - speed:    # I need to add to the y
-            y += speed
+        #if keys[pygame.K_UP] and y > speed:     # I need to substract to the y
+            #y -= speed
+        #if keys[pygame.K_DOWN] and y < HEIGHT - height - speed:    # I need to add to the y
+            #y += speed
         if keys[pygame.K_SPACE]:
             Jump = True
             left = False
@@ -86,6 +100,7 @@ while run:
         else:
             high = 10
             Jump = False
+
  
     redrawGameWindow()
  
