@@ -64,6 +64,11 @@ while run:
         left = True
         right = False
         backgroundX += backgroundSpeed
+        if backgroundX > 0:
+            backgroundX = 0
+        elif backgroundX < -3000:
+            backgroundX = -3000
+        #print(backgroundX)
         #if backgroundX < 0:
             #backgroundX = 0
         screen.blit(bg, (backgroundX,0))
@@ -74,8 +79,11 @@ while run:
         left = False
         right = True
         backgroundX -= backgroundSpeed
-        #if backgroundX > 3000:
-            #backgroundX = 3000
+        if backgroundX > 0:
+            backgroundX = 0
+        elif backgroundX < -3000:
+            backgroundX = -3000
+        #print(backgroundX)
         screen.blit(bg, (backgroundX,0))
          
     else:
