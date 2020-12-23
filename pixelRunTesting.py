@@ -1,5 +1,5 @@
 #Aarian Dhanani
-#Pixel run will be an infinite running game where the player has to avoid obstacles.
+#Pixel run is an infinite running game where the player can try to avoid obstacles. There are 3 difficulty settings as well as a leaderboard.
 
 import pygame
 import random
